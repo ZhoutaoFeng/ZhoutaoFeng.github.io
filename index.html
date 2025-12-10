@@ -2,248 +2,396 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>主页 | Apple-Style Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>主页 | MySite</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
   <header class="nav">
-    <div class="logo">MySite</div>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我</a>
-      <a href="projects.html">项目</a>
-      <a href="contact.html">联系</a>
-    </nav>
+    <div class="nav-inner">
+      <div class="logo">MySite</div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html" class="active">首页</a>
+        <a href="about.html">关于我</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle" aria-label="切换主题" class="icon-btn">🌙</button>
+        <button id="hamburger" class="hamburger" aria-label="菜单">☰</button>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>简洁 · 优雅 · 专业</h1>
-    <p>受 Apple 风格启发的极简个人网站</p>
-  </section>
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="reveal-up">简洁 · 优雅 · 专业</h1>
+        <p class="reveal-up delay-1">受 Apple 风格启发的极简个人网站 — 支持暗色模式、响应式、以及丝滑动效</p>
+        <div class="hero-cta reveal-up delay-2">
+          <a href="projects.html" class="btn">查看项目</a>
+          <a href="about.html" class="btn ghost">关于我</a>
+        </div>
+      </div>
+      <div class="hero-bg"></div>
+    </section>
 
-  <section class="grid">
-    <div class="card">
-      <h2>关于我</h2>
-      <p>了解我是谁、我在做什么。</p>
-      <a class="btn" href="about.html">进入</a>
-    </div>
-    <div class="card">
-      <h2>项目展示</h2>
-      <p>查看我参与或主导的项目。</p>
-      <a class="btn" href="projects.html">进入</a>
-    </div>
-    <div class="card">
-      <h2>联系我</h2>
-      <p>通过邮箱或社交方式联系我。</p>
-      <a class="btn" href="contact.html">进入</a>
-    </div>
-  </section>
+    <section class="grid section">
+      <article class="card reveal">
+        <h2>关于我</h2>
+        <p>职业：嵌入式工程师 · 机器人方向。擅长控制算法与系统集成。</p>
+        <a class="btn small" href="about.html">进入</a>
+      </article>
+
+      <article class="card reveal delay-1">
+        <h2>项目展示</h2>
+        <p>实时控制平台、机械臂仿真、CAN 总线电机驱动等工程案例。</p>
+        <a class="btn small" href="projects.html">进入</a>
+      </article>
+
+      <article class="card reveal delay-2">
+        <h2>联系我</h2>
+        <p>Email: example@mail.com — 或在项目页查看详细联系方式。</p>
+        <a class="btn small" href="contact.html">进入</a>
+      </article>
+    </section>
+
+    <section class="features section">
+      <div class="text">
+        <h3 class="reveal-up">设计亮点</h3>
+        <ul class="reveal-up delay-1">
+          <li>暗色 / 亮色切换（自动 + 手动）</li>
+          <li>滚动渐变与元素显现动画（Intersection Observer）</li>
+          <li>响应式导航与手机友好布局</li>
+          <li>细腻的玻璃与模糊（backdrop-filter）动效</li>
+        </ul>
+      </div>
+      <div class="visual reveal delay-2">
+        <div class="mockup"></div>
+      </div>
+    </section>
+
+  </main>
 
   <footer class="footer">© 2025 MySite</footer>
 </body>
 </html>
+
 
 <!-- about.html -->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>关于我 | MySite</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
   <header class="nav">
-    <div class="logo">MySite</div>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html" class="active">关于我</a>
-      <a href="projects.html">项目</a>
-      <a href="contact.html">联系</a>
-    </nav>
+    <div class="nav-inner">
+      <div class="logo">MySite</div>
+      <nav class="nav-links" id="navLinks2">
+        <a href="index.html">首页</a>
+        <a href="about.html" class="active">关于我</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle2" aria-label="切换主题" class="icon-btn">🌙</button>
+        <button id="hamburger2" class="hamburger">☰</button>
+      </div>
+    </div>
   </header>
 
-  <section class="page">
-    <h1>关于我</h1>
-    <p>这里填写你的个人介绍，如职业、兴趣、擅长方向等。</p>
-  </section>
+  <main>
+    <section class="page section">
+      <div class="page-inner reveal">
+        <h1>关于我</h1>
+        <p>这里写更详细的个人介绍。例如教育背景、职业经历、擅长技能、以及你希望展示的研究/项目亮点。</p>
+        <h3>技能</h3>
+        <p>控制算法 · 嵌入式系统 · 多传感器融合 · CAN 总线 · ROS（如适用）</p>
+        <h3>经验</h3>
+        <p>在公司/实验室中担任过的职务与主要工作简述。</p>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">© 2025 MySite</footer>
 </body>
 </html>
+
 
 <!-- projects.html -->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>项目展示</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>项目 | MySite</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
   <header class="nav">
-    <div class="logo">MySite</div>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我</a>
-      <a href="projects.html" class="active">项目</a>
-      <a href="contact.html">联系</a>
-    </nav>
+    <div class="nav-inner">
+      <div class="logo">MySite</div>
+      <nav class="nav-links" id="navLinks3">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我</a>
+        <a href="projects.html" class="active">项目</a>
+        <a href="contact.html">联系</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle3" aria-label="切换主题" class="icon-btn">🌙</button>
+        <button id="hamburger3" class="hamburger">☰</button>
+      </div>
+    </div>
   </header>
 
-  <section class="page">
-    <h1>我的项目</h1>
-    <div class="project-item">
-      <h2>项目 1</h2>
-      <p>项目说明...</p>
-    </div>
-    <div class="project-item">
-      <h2>项目 2</h2>
-      <p>项目说明...</p>
-    </div>
-  </section>
+  <main>
+    <section class="page section">
+      <div class="page-inner">
+        <h1>项目</h1>
+        <div class="project-list">
+          <article class="project-item reveal">
+            <h2>实时控制平台</h2>
+            <p>说明：高速采样、延迟控制、跨平台集成。</p>
+          </article>
+          <article class="project-item reveal delay-1">
+            <h2>机器人抓取系统</h2>
+            <p>说明：视觉、力控与路径规划整合。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">© 2025 MySite</footer>
 </body>
 </html>
+
 
 <!-- contact.html -->
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>联系我</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>联系 | MySite</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="scripts.js"></script>
 </head>
 <body>
   <header class="nav">
-    <div class="logo">MySite</div>
-    <nav>
-      <a href="index.html">首页</a>
-      <a href="about.html">关于我</a>
-      <a href="projects.html">项目</a>
-      <a href="contact.html" class="active">联系</a>
-    </nav>
+    <div class="nav-inner">
+      <div class="logo">MySite</div>
+      <nav class="nav-links" id="navLinks4">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我</a>
+        <a href="projects.html">项目</a>
+        <a href="contact.html" class="active">联系</a>
+      </nav>
+      <div class="controls">
+        <button id="themeToggle4" aria-label="切换主题" class="icon-btn">🌙</button>
+        <button id="hamburger4" class="hamburger">☰</button>
+      </div>
+    </div>
   </header>
 
-  <section class="page">
-    <h1>联系我</h1>
-    <p>Email: example@mail.com</p>
-  </section>
+  <main>
+    <section class="page section">
+      <div class="page-inner reveal">
+        <h1>联系我</h1>
+        <p>Email: example@mail.com</p>
+        <p>或者通过 GitHub / LinkedIn 私信联系（在页脚或侧边栏放置链接）。</p>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">© 2025 MySite</footer>
 </body>
 </html>
 
+
 <!-- style.css -->
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial;
+:root{
+  --bg: #ffffff;
+  --surface: #fafafa;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #000000;
+  --glass: rgba(255,255,255,0.6);
 }
 
-body {
-  background: #fff;
-  color: #111;
+@media (prefers-color-scheme: dark) {
+  :root{
+    --bg: #0b0b0d;
+    --surface: #0f1720;
+    --text: #e6eef8;
+    --muted: #9aa6b2;
+    --accent: #fff;
+    --glass: rgba(255,255,255,0.06);
+  }
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg) 0%, color-mix(in srgb, var(--bg) 90%, transparent) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
+.nav{
+  position:sticky;top:0;z-index:40;backdrop-filter:blur(8px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  border-bottom:1px solid rgba(0,0,0,0.04);
 }
 
-.nav a.active {
-  color: #000;
-  font-weight: 600;
+@media (prefers-color-scheme: dark){
+  .nav{ background: linear-gradient(180deg,var(--glass), rgba(255,255,255,0.02)); border-bottom:1px solid rgba(255,255,255,0.03);} 
 }
 
-.logo {
-  font-size: 20px;
-  font-weight: 700;
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px}
+.logo{font-weight:700;font-size:18px}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{color:var(--text);text-decoration:none;font-weight:500}
+.nav-links a.active{font-weight:700}
+
+.controls{display:flex;align-items:center;gap:8px}
+.icon-btn{background:transparent;border-radius:10px;padding:8px;border:1px solid transparent;cursor:pointer}
+.hamburger{display:none;background:transparent;border:0;font-size:20px}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;padding:80px 20px 120px}
+.hero-inner{max-width:920px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.hero h1{font-size:44px;margin-bottom:12px;letter-spacing:-0.02em}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:20px}
+.hero-cta{display:flex;gap:12px;justify-content:center}
+.btn{background:var(--accent);color:var(--bg);padding:12px 18px;border-radius:14px;text-decoration:none;font-weight:600}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid rgba(0,0,0,0.06)}
+
+.hero-bg{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.hero-bg::before{content:"";position:absolute;left:50%;top:20%;transform:translateX(-50%);width:1100px;height:600px;border-radius:40px;background:radial-gradient(closest-side, color-mix(in srgb,var(--accent) 8%, transparent), transparent 60%);filter:blur(80px);opacity:0.08}
+
+/* Grid */
+.section{max-width:1100px;margin:0 auto;padding:40px 20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);padding:28px;border-radius:16px;box-shadow:0 8px 18px rgba(2,6,23,0.04);border:1px solid rgba(0,0,0,0.03)}
+.card h2{margin-bottom:8px}
+.card p{color:var(--muted);margin-bottom:12px}
+.btn.small{padding:8px 12px;border-radius:10px}
+
+/* Features */
+.features{display:flex;gap:40px;align-items:center}
+.features .text{flex:1}
+.features .visual{flex:1;display:flex;align-items:center;justify-content:center}
+.mockup{width:320px;height:200px;border-radius:18px;background:linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));box-shadow:0 10px 30px rgba(2,6,23,0.06);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.04)}
+
+.page{padding:60px 20px}
+.page-inner{max-width:900px;margin:0 auto}
+.project-list{display:grid;gap:18px}
+.project-item{padding:18px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);background:var(--surface)}
+
+.footer{text-align:center;padding:32px;color:var(--muted)}
+
+/* Reveal animations */
+.reveal, .reveal-up{opacity:0;transform:translateY(12px);transition:opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1)}
+.reveal.revealed, .reveal-up.revealed{opacity:1;transform:none}
+.delay-1{transition-delay:120ms}
+.delay-2{transition-delay:240ms}
+
+/* Responsive */
+@media(max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .hero h1{font-size:36px}
+}
+@media(max-width:640px){
+  .grid{grid-template-columns:1fr}
+  .features{flex-direction:column}
+  .nav-links{display:none}
+  .hamburger{display:inline-block}
+  .hero{padding:56px 16px 90px}
+  .hero h1{font-size:28px}
 }
 
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-}
+/* Theme toggle visible state */
+[data-theme='dark']{--bg:#08080a;--surface:#0e1114;--text:#e6eef8;--muted:#9aa6b2;--accent:#fff}
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
+/* Smooth scroll */
+html{scroll-behavior:smooth}
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 40px;
-}
+/* small utility */
+.hidden{display:none}
 
-.card {
-  border: 1px solid #eee;
-  border-radius: 20px;
-  padding: 30px;
-  text-align: center;
-  background: #fafafa;
-  transition: 0.3s;
-}
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-}
+/* end style */
 
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #000;
-  color: #fff;
-  border-radius: 10px;
-  text-decoration: none;
-  font-size: 14px;
-}
 
-.page {
-  max-width: 800px;
-  padding: 60px 40px;
-  margin: auto;
-}
+<!-- scripts.js -->
+// Theme toggle, hamburger menu, reveal on scroll
+(function(){
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const saved = localStorage.getItem('theme');
+  const root = document.documentElement;
+  function applyTheme(theme){
+    if(theme === 'dark') root.setAttribute('data-theme','dark');
+    else root.removeAttribute('data-theme');
+    document.querySelectorAll('.icon-btn').forEach(b=>b.textContent = (theme === 'dark') ? '☀️' : '🌙');
+  }
+  const initial = saved || (prefersDark ? 'dark' : 'light');
+  applyTheme(initial);
 
-.page h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
+  document.querySelectorAll('[id^=themeToggle]').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const current = root.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      applyTheme(next);
+      localStorage.setItem('theme', next);
+    });
+  });
 
-.project-item {
-  margin-bottom: 30px;
-}
+  // hamburger
+  document.querySelectorAll('[id^=hamburger]').forEach((hb, idx)=>{
+    hb.addEventListener('click', ()=>{
+      const nav = document.querySelectorAll('.nav-links')[idx] || document.querySelector('.nav-links');
+      if(!nav) return;
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.right = '16px';
+      nav.style.top = '64px';
+      nav.style.background = 'var(--surface)';
+      nav.style.padding = '12px';
+      nav.style.borderRadius = '12px';
+      nav.style.boxShadow = '0 10px 30px rgba(2,6,23,0.08)';
+    });
+  });
 
-.footer {
-  text-align: center;
-  padding: 30px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
-  font-size: 14px;
-}
-</style>
+  // reveal on scroll
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('revealed');
+      }
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal, .reveal-up').forEach(el=>observer.observe(el));
+
+  // tiny parallax for hero bg
+  const hero = document.querySelector('.hero');
+  if(hero){
+    window.addEventListener('scroll', ()=>{
+      const y = window.scrollY;
+      hero.querySelector('.hero-bg').style.transform = `translateY(${Math.min(y * 0.15, 60)}px)`;
+    });
+  }
+
+})();
